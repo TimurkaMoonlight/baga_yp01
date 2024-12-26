@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Ввести P (0 < P < 50);
+if (P <= 0 || P >= 50) then (да)
+    :Вывести "Некорректное значение P";
+    stop
+endif
+
+:Инициализировать: пробег первого дня distance = 10;
+:Суммарный пробег S = 10;
+:Количество дней K = 1;
+
+while (S <= 200?) is (да)
+    :distance = distance + (distance * P / 100);
+    :S = S + distance;
+    :K = K + 1;
+endwhile
+
+:Вывести K (количество дней) и S (суммарный пробег);
+stop
+@enduml

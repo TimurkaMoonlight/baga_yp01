@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Ввести N (N > 0);
+if (N <= 0) then (да)
+    :Вывести "Ошибка: N должно быть > 0";
+    stop
+endif
+
+:Инициализировать sum = 0, count = 0;
+
+while (N > 0?) is (да)
+    :digit = N % 10;
+    :sum = sum + digit;
+    :count = count + 1;
+    :N = N / 10;
+endwhile
+
+:Вывести count (количество цифр);
+:Вывести sum (сумма цифр);
+stop
+@enduml

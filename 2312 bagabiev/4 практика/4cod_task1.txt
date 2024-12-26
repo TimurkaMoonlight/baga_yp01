@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Ввод целого числа K;
+
+if (K == 1) then (yes)
+    :Вывод "плохо";
+else (no)
+    if (K == 2) then (yes)
+        :Вывод "неудовлетворительно";
+    else (no)
+        if (K == 3) then (yes)
+            :Вывод "удовлетворительно";
+        else (no)
+            if (K == 4) then (yes)
+                :Вывод "хорошо";
+            else (no)
+                if (K == 5) then (yes)
+                    :Вывод "отлично";
+                else (no)
+                    :Вывод "ошибка";
+                endif
+            endif
+        endif
+    endif
+endif
+
+stop
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+start
+:Ввод n;
+
+if (n < 1 || n > 999?) then (yes)
+  :Ошибка: число вне диапазона;
+else (no)
+  if (n % 2 == 0?) then (yes)
+    :s = "Четное ";
+  else (no)
+    :s = "Нечетное ";
+  endif
+
+  if (n < 10?) then (yes)
+    :p = "однозначное";
+  else if (n < 100?) then (yes)
+    :p = "двузначное";
+  else
+    :p = "трехзначное";
+  endif
+:Вывод s + p + " число";
+endif
+stop
+@enduml

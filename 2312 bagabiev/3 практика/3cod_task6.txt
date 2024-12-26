@@ -1,0 +1,21 @@
+@startuml
+start
+:Ввод n;
+
+if (n == 0?) then (yes)
+  :s = "Нулевое число";
+else if (n < 0?) then (yes)
+  :s = "Отрицательное ";
+else (no)
+  :s = "Положительное ";
+endif
+
+if (n % 2 == 0?) then (yes)
+  :p = "четное число";
+else (no)
+  :p = "нечетное число";
+endif
+
+:Вывод s + p;
+stop
+@enduml

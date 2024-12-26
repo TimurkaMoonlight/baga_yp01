@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Ввод трех целых чисел: a, b, c;
+
+if (a == b) then
+  if (a == c) then
+    :Ошибка: Все числа равны;
+  else
+    :Вывести "3";
+  endif
+else
+  if (a == c) then
+    :Вывести "2";
+   else
+     if(b == c) then
+        :Вывести "1";
+     else
+        :Ошибка: Все числа разные;
+    endif
+  endif
+endif
+
+stop
+@enduml

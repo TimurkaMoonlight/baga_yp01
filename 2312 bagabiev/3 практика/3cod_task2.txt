@@ -1,0 +1,15 @@
+@startuml
+start
+
+:Ввод целого числа N;
+
+if (N > 0) then (Да)
+  :N = N - 8;
+else (Нет или равно 0)
+  :N = N + 6;
+endif
+
+:Вывести N;
+
+stop
+@enduml

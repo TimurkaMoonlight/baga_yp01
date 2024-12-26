@@ -1,0 +1,74 @@
+@startuml
+' Заголовок диаграммы
+title Описание возраста
+
+' Начало
+start
+
+:Ввод возраста (age);
+
+' Проверка диапазона
+if (age < 20 or age > 69) then
+  :Ошибка: возраст вне диапазона 20-69;
+  stop
+endif
+
+' Выделяем десятки и единицы
+:tens = age / 10;
+:ones = age % 10;
+
+' Преобразовываем десятки в строку
+switch (tens)
+  case (2)
+    :tens_str = "двадцать";
+  case (3)
+    :tens_str = "тридцать";
+  case (4)
+    :tens_str = "сорок";
+  case (5)
+    :tens_str = "пятьдесят";
+  case (6)
+    :tens_str = "шестьдесят";
+endswitch
+
+' Преобразовываем единицы в строку
+switch (ones)
+  case (1)
+    :ones_str = "один";
+  case (2)
+    :ones_str = "два";
+  case (3)
+    :ones_str = "три";
+  case (4)
+    :ones_str = "четыре";
+  case (5)
+    :ones_str = "пять";
+   case (6)
+    :ones_str = "шесть";
+  case (7)
+    :ones_str = "семь";
+  case (8)
+    :ones_str = "восемь";
+  case (9)
+    :ones_str = "девять";
+  case (0)
+     :ones_str = "";
+endswitch
+
+' Формируем результирующую строку
+if (ones == 0) then
+    :result = tens_str + " лет";
+else
+  if (ones == 1) then
+    :result = tens_str + " " + ones_str + " год";
+  else
+    :result = tens_str + " " + ones_str + " года";
+  endif
+endif
+
+
+:Вывод result;
+
+' Конец
+stop
+@enduml

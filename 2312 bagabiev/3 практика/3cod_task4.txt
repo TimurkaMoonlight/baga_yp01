@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Ввод x (вещественное число) и k (целое число);
+
+switch (k)
+  case (3)
+    :y = sin(x) + 2;
+    break
+  case (20)
+    :y = cos(x)^2;
+    break
+  case (10)
+  case (15)
+    :y = tan(x) + sin(x)^2;
+    break
+    :y не определено;
+    :Вывести "Значение y не определено";
+    stop
+endswitch
+
+:Вывести y;
+
+stop
+@enduml

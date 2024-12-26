@@ -1,0 +1,17 @@
+@startuml
+start
+
+:Ввод координат точки (x, y) и радиуса R;
+
+:distance = sqrt(x*x + y*y);
+
+if (distance < R) then (Да)
+  :Вывести "Да";
+elseif (distance == R) then (На границе)
+  :Вывести "На границе";
+else (Нет)
+  :Вывести "Нет";
+endif
+
+stop
+@enduml

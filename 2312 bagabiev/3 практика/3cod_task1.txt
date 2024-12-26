@@ -1,0 +1,16 @@
+@startuml
+@startuml
+start
+
+:Ввод целого числа N;
+
+if (N % 10 == 7) then (Да)
+  :Вывести "Да";
+else (Нет)
+  :Вывести "Нет";
+endif
+
+stop
+
+@enduml
+@enduml

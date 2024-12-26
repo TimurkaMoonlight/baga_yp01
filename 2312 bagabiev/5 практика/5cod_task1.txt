@@ -1,0 +1,20 @@
+@startuml
+title Программа для подсчета чисел, кратных 5 или 9
+
+start
+: Инициализация счетчика count = 0;
+
+repeat
+    : Ввод целого числа (num);
+repeat while (num != 0)
+
+    if (num % 5 == 0 or num % 9 == 0) then (yes)
+        : count = count + 1; // Увеличиваем счетчик
+    endif
+
+repeat while (num != 0)
+
+: Вывод: Количество чисел, кратных 5 или 9 = {count};
+
+stop
+@enduml

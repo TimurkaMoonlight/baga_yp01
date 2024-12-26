@@ -1,0 +1,18 @@
+@startuml
+start
+
+:Ввести A и B;
+if (A <= B) then (да)
+    :Вывести "Некорректные данные (A должно быть > B)";
+    stop
+endif
+
+:Инициализировать count = 0;
+while (A >= B?) is (да)
+    :A = A - B;
+    :count = count + 1;
+endwhile
+
+:Вывести count (количество отрезков B на отрезке A);
+stop
+@enduml
