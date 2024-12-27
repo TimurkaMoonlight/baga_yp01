@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="500.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.bagabiev.bagabiev_task1.controller.three">
+   <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+         <HBox prefHeight="53.0" prefWidth="600.0" style="-fx-background-color: #505050;">
+            <children>
+               <HBox prefHeight="53.0" HBox.hgrow="NEVER">
+                  <padding><Insets bottom="5.0" left="15.0" right="5.0" top="5.0" /></padding>
+                  <Button fx:id="BackB" mnemonicParsing="false" onAction="#BackB" style="-fx-background-radius: 5;" text="Назад">
+                  </Button>
+               </HBox>
+               <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                  <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="MARATHON SKILLS 2016" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="17.0" right="165.0" />
+                     </HBox.margin></Label>
+               </HBox>
+               <HBox prefHeight="53.0" HBox.hgrow="NEVER">
+                  <padding><Insets bottom="5.0" left="5.0" right="15.0" top="5.0" /></padding>
+                  <Button mnemonicParsing="false" style="-fx-background-radius: 5;" text="Logout">
+                  </Button>
+               </HBox>
+            </children>
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor>
+         </HBox>
+      </top>
+      <bottom>
+         <HBox alignment="CENTER" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #505050;">
+            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+            <Label alignment="CENTER" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="18 дней 8 часов и 17 минут до старта марафона!" textFill="WHITE">
+            </Label>
+         </HBox>
+      </bottom>
+      <center>
+         <VBox alignment="CENTER" spacing="20">
+            <padding><Insets top="20" /></padding>
+            <Label style="-fx-font-size: 18px;" text="Форма авторизации" textFill="#5b5b5b" />
+            <Label maxWidth="400" style="-fx-font-size: 14px; -fx-text-alignment: center;" text="Пожалуйста, авторизуйтесь в системе, используя ваш адрес электронной почты и пароль" wrapText="true" />
+
+            <GridPane alignment="CENTER" hgap="10" vgap="10">
+               <Label style="-fx-font-size: 14px;" text="Email" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <TextField promptText="Enter your email address" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+               <Label style="-fx-font-size: 14px;" text="Password" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <TextField promptText="Enter your password" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="10">
+               <Button mnemonicParsing="false" style="-fx-background-radius: 5; -fx-padding: 7;" text="Login" />
+               <Button fx:id="Cancel" mnemonicParsing="false" onAction="#Cancel" style="-fx-background-radius: 5; -fx-padding: 7;" text="Cancel" />
+            </HBox>
+         </VBox>
+      </center>
+   </BorderPane>
+</AnchorPane>

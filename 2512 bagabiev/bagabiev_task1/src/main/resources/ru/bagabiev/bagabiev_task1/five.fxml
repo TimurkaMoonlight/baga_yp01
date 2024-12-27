@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.bagabiev.bagabiev_task1.controller.five">
+   <children>
+      <BorderPane layoutX="0.0" layoutY="0.0" maxHeight="500.0" maxWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="53.0" prefWidth="100" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButton" style="-fx-background-radius: 5;" text="Назад">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="299.0" text="MARATHON SKILLS 2016" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logButtonOnAction" style="-fx-background-radius: 5;" text="Logout">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="160.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="42.0" prefWidth="100" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="18 дней 8 часов и 17 минут до старта марафона!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="130.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane maxHeight="500.0" maxWidth="600.0" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="196.0" layoutY="14.0" prefHeight="25.0" prefWidth="207.0" style="-fx-font-size: 16; -fx-font-weight: bold; text-align: center;" text="Регистрация на марафон " textFill="#7c7c7c" />
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="100.0" style="-fx-font-size: 14; -fx-font-weight: bold; text-align: center;" text="Вид марафона" textFill="#7c7c7c" />
+
+
+                  <CheckBox alignment="CENTER" layoutX="23.0" layoutY="130.0" text="Полный марафон (42 км)" />
+                  <CheckBox alignment="CENTER" layoutX="23.0" layoutY="160.0" text="Полумарафон (21 км)" />
+                  <CheckBox alignment="CENTER" layoutX="23.0" layoutY="190.0" text="Малая дистанция (5 км)" />
+
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="225.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Детали спонсорства" textFill="#7c7c7c" />
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="268.0" style="-fx-font-size: 12;" text="Взнос" />
+                  <TextField alignment="CENTER" layoutX="93.0" layoutY="263.0" prefHeight="25.0" prefWidth="70.0" promptText="Фонд кошек" />
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="293.0" style="-fx-font-size: 12;" text="Сумма" />
+                  <TextField alignment="CENTER" layoutX="93.0" layoutY="288.0" prefHeight="25.0" prefWidth="70.0" promptText="-$500-" />
+
+
+                  <Button fx:id="register" alignment="CENTER" layoutX="27.0" layoutY="346.0" mnemonicParsing="false" onAction="#regButtonOnAction" style="-fx-background-radius: 5; -fx-padding: 10 20 10 20;" text="Регистрация" />
+                  <Button fx:id="Cancel" alignment="CENTER" layoutX="149.0" layoutY="346.0" mnemonicParsing="false" onAction="#Cancel" style="-fx-background-radius: 5; -fx-padding: 10 20 10 20;" text="Отмена" />
+
+                  <Label alignment="CENTER" layoutX="224.0" layoutY="100.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Варианты комплексов" textFill="#7c7c7c" />
+
+                  <CheckBox alignment="CENTER" layoutX="224.0" layoutY="130.0" text="Вариант A ($0): Номер бегуна + RFID браслет." />
+                  <CheckBox alignment="CENTER" layoutX="224.0" layoutY="160.0" text="Вариант B ($20): Вариант A + бейсболка + бутылка воды." />
+                  <CheckBox alignment="CENTER" layoutX="224.0" layoutY="190.0" text="Вариант C ($45): Вариант B + футболка + сувенирный буклет." />
+
+                  <Label alignment="CENTER" layoutX="308.0" layoutY="231.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Регистрационный взнос" textFill="#7c7c7c" />
+                  <Label alignment="CENTER" layoutX="354.0" layoutY="261.0" style="-fx-font-size: 24; -fx-font-weight: bold; color: red;" text="-$185-" textFill="#7c7c7c" />
+                  <Label layoutX="81.0" layoutY="39.0" prefHeight="17.0" prefWidth="469.0" text="Пожалуйста заполните всю информацию, чтобы зарегистрироваться на Skills" />
+                  <Label layoutX="78.0" layoutY="56.0" prefHeight="17.0" prefWidth="428.0" text="       Marathon 2016 проводимом в Москве. Russia. С вами свяжутся после" />
+                  <Label layoutX="103.0" layoutY="73.0" prefHeight="17.0" prefWidth="362.0" text="       регистрации для уточнения оплаты и другой информации." />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
